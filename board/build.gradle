@@ -68,10 +68,10 @@ compileQuerydsl{
 	options.annotationProcessorPath = configurations.querydsl
 }
 
-//project.afterEvaluate {
-//	project.tasks.compileQuerydsl.options.compilerArgs = [
-//			"-proc:only",
-//			"-processor", project.querydsl.processors() +
-//					',lombok.launch.AnnotationProcessorHider$AnnotationProcessor'
-//	]
-//}
+project.afterEvaluate {
+	project.tasks.compileQuerydsl.options.compilerArgs = [
+			"-proc:only",
+			"-processor", project.querydsl.processors() +
+					',lombok.launch.AnnotationProcessorHider$AnnotationProcessor'
+	]
+}
