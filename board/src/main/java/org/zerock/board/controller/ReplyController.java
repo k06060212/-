@@ -18,6 +18,7 @@ import java.util.List;
 public class ReplyController {
 
     private final ReplyService replyService;    // 자동주입을 위해 final
+    
 
     @GetMapping(value="/board/{bno}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ReplyDTO>> getListByBoard(@PathVariable("bno") Long bno){
